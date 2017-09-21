@@ -1,0 +1,490 @@
+$oswald: 'Oswald', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+$rood: #b00e32;
+$background: #ccc;
+$donkergrijs: #303030;
+$roze: #f6cfd0;
+
+/*presets*/
+.container-fluid {
+  padding: 0 5%;
+}
+.padrig120{
+  padding-right: 120px;
+}
+
+/*basis instellingen*/
+body {
+  background: $background;
+  font-family: $opensans;
+  font-weight: lighter;
+  background: url("../images/patterns_light.jpg");
+  height: 2000px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $oswald;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+h2{
+  font-size: 30px;
+}
+
+/*buttons*/
+.buttons{
+  color: $donkergrijs;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0px;
+  &:before{
+    content: url('../images/arrow-red.png');
+    margin-right: 10px;
+  }
+  &:hover{
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+}
+.button-wit{
+  color: #fff;
+}
+
+/*top balk*/
+.topbalk {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex: auto;
+  height: 200px;
+  background: url(../images/patterns_light.jpg);
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+  z-index: 10000;
+  }
+  .smaller .topbalk{
+    height: 75px;
+    }
+
+  .logo {
+    width: 400px;
+    transition: all ease-in-out 0.5s;
+    }
+    .smaller .logo{
+      width: 200px;
+    }
+  .top-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    }
+    .menu,
+    .tel {
+      font-family: $oswald;
+      color: $donkergrijs;
+      font-size: 20px;
+      }
+    .tel {
+      margin-right: 175px;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+      }
+    .smaller .tel{
+      opacity: 0;
+    }
+    .menu {
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      span {
+        margin-left: 15px;
+        }
+      }
+      /*hamburger*/
+      .button {
+        cursor: pointer;
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+        transition: all 0.3s ease-in-out;
+        &:hover .bar {
+          margin: 7px auto;
+        }
+      }
+
+    .bar {
+      display: block;
+      height: 3px;
+      width: 50px;
+      background-color: $rood;
+      margin: 5px auto;
+      transition: all 0.1s ease-in-out;
+      &:hover{
+        margin: 7px auto;
+      }
+    }
+/* Video Overlay */
+#overlay {
+  height: 600px;
+  left: 0;
+  position: relative;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  /* Hero Video + Fallback */
+  #hero-vid {
+    backface-visibility: hidden;
+    background: url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000;
+    background-size: cover;
+    height: auto;
+    min-height: 400px;
+    height: 600px;
+    min-width: 100%;
+    perspective: 1000;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    width: auto;
+    z-index: -1;
+    }
+
+  #hero-pic {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  #title {
+    backface-visibility:hidden;
+    left:0;
+    position:fixed;
+    width:100%;
+    h1 {
+      font-family: $oswald;
+      font-size:4em;
+      color: #fff;
+      padding: 0px 5%;
+      letter-spacing: 15px;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+  }
+
+    .btn-rood{
+      margin-bottom: -100px;
+      margin-left: auto;
+      align-self: flex-end;
+      padding: 36px 60px 36px 40px;
+      background: $rood;
+      color: #fff;
+      font-family: $oswald;
+      text-transform: uppercase;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      &:before{
+        content: url('../images/arrow-white.png');
+        margin-right: 10px;
+        margin-top: -7px;
+      }
+      &:hover{
+        background: $donkergrijs;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .scroll-down{
+      position: absolute;
+      top: 500px;
+      left: 5%;
+    }
+    /*blokken in header*/
+    #blokken{
+      height: 550px;
+      width: 500px;
+      background: #ffffff;
+      align-self: flex-end;
+      margin-bottom: -100px;
+      margin-right: 5%;
+      z-index: 2;
+      }
+      .blok{
+        height: 275px;
+        width: 250px;
+        float: left;
+        padding: 45px;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: $oswald;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        span{
+          color: $rood;
+          font-size: 12px;
+          font-family: $opensans;
+          font-style: italic;
+          font-weight: lighter;
+          }
+        p{
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+        .prijs{
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          width: 100%;
+          span{
+            float: left;
+            margin-bottom: 5px;
+            margin-right: 20px;
+          }
+          p{
+            float: right;
+            font-size: 40px;
+            margin: 0px;
+          }
+        }
+      }
+      .blok1{
+        background: $donkergrijs;
+        }
+      .blok2{
+        background: $roze;
+        span{
+          color: $donkergrijs;
+        }
+        p{
+          color: $rood;
+        }
+      }
+      .strikediag {
+        background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+      }
+      .blok3{
+        width: 100%;
+        span{
+          font-size: 15px;
+          color: $donkergrijs;
+        }
+        p{
+          font-size: 40px;
+          color: $rood;
+        }
+        .prijs{
+          justify-content: flex-end;
+          p{
+            font-size: 60px;
+            color: $donkergrijs;
+          }
+          span{
+            margin-bottom: 15px;
+            margin-right: 20px;
+          }
+        }
+      }
+
+/*Intro*/
+#intro{
+  position: relative;
+  margin-top: 375px;
+  background: url(../images/patterns_dark.png);
+  color: #fff;
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 300;
+  .row{
+    display: flex;
+    align-items: center;
+    line-height: 2;
+  }
+  .buttons{
+    transition: all 0.3s ease-in-out;
+    margin-left: -20px;
+    &:hover{
+      margin-left: 5px;
+    }
+  }
+}
+
+/*nieuwsbericht*/
+#nieuwsbericht{
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 300;
+  .row{
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    span{
+      color: $rood;
+      font-size: 20px;
+      font-family: $oswald;
+      display: inline-block;
+      padding: 15px 0px;
+    }
+  }
+  .buttons{
+    transition: all 0.3s ease-in-out;
+    margin-left: -20px;
+    &:hover{
+      margin-left: 5px;
+      color: $rood;
+    }
+  }
+  //*nieuws afbeeldingen
+  .nieuws-image-container{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .graan{
+      position: absolute;
+      right: 0px;
+      z-index: 3;
+    }
+    .vlak-roze{
+      position: absolute;
+      right: 10%;
+      z-index: 1;
+    }
+    .nieuwsimage{
+      z-index: 2;
+      margin-top: 20%;
+    }
+  }
+}
+
+/*Historie slider*/
+#historie{
+  .item{
+    display: flex;
+    align-items: center;
+    .container-fluid{
+      position: absolute;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .row{
+        margin:0px;
+        .timeline-container{
+          background: $donkergrijs;
+          height: 40vh;
+          width: 55%;
+          color: #fff;
+          padding: 45px;
+          box-sizing: border-box;
+          span{
+            font-size: 20px;
+            color: $rood;
+            font-family: $oswald;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  //nav prev/next
+  .owl-nav{
+    position: absolute;
+    height: 70px;
+    bottom: 0px;
+    left: 5%;
+    display: inline-block;
+    width: 200px;
+    .owl-prev{
+      float:left;
+      padding: 30px 10px;
+      background: #fff;
+      content: url('../images/arrow-red-reverse.png');
+    }
+    .owl-next{
+      float: left;
+      padding: 30px 10px;
+      background: #ececec;
+      content: url('../images/arrow-red.png');
+    }
+  }
+  //nav dots
+  .owl-dots{
+    position: absolute;
+    bottom: 115px;
+    margin: 0px 45px;
+    left: 5%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    height: 3px;
+    .owl-dot{
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #fff;
+      float: left;
+      margin: 0px 5px;
+    }
+    .owl-dot:first-child{
+      margin-left: 0px;
+    }
+    .owl-dot:first-child.active{
+      margin-left: -5px;
+    }
+    .owl-dot:last-child{
+      margin-right: 0px;
+    }
+    .owl-dot:last-child.active{
+      margin-right: -5px;
+    }
+    .active{
+      background: $rood;
+      height: 20px;
+      width: 20px;
+      margin: 0px;
+    }
+  }
+
+}
+/*Eind historie slider*/
+
+/* Media Queries */
+@media only screen and (max-width:768px) {
+  #overlay {
+    height: auto;
+  }
+}
+/* Visibility Helpers */
+@media only screen and (min-width:769px) {
+  .hidden-desktop,
+  .visible-mobile,
+  .visible-tablet {
+    display: none !important;
+  }
+}
+@media only screen and (min-width:480px) and (max-width:768px) {
+  .hidden-tablet,
+  .visible-desktop,
+  .visible-mobile {
+    display: none !important;
+  }
+}
+@media only screen and (max-width:479px) {
+  .hidden-mobile,
+  .visible-desktop,
+  .visible-tablet {
+    display: none !important;
+  }
+}
