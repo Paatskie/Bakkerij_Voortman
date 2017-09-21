@@ -1,0 +1,417 @@
+/*presets*/
+.container-fluid {
+  padding: 0 5%; }
+
+.padrig120 {
+  padding-right: 120px; }
+
+/*basis instellingen*/
+body {
+  background: #ccc;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  background: url("../images/patterns_light.jpg");
+  height: 2000px;
+  margin: 0px;
+  padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.5; }
+
+h2 {
+  font-size: 30px; }
+
+/*buttons*/
+.buttons {
+  color: #303030;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0px; }
+  .buttons:before {
+    content: url("../images/arrow-red.png");
+    margin-right: 10px; }
+  .buttons:hover {
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none; }
+
+.button-wit {
+  color: #fff; }
+
+/*top balk*/
+.topbalk {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex: auto;
+  height: 200px;
+  background: url(../images/patterns_light.jpg);
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+  z-index: 10000; }
+
+.smaller .topbalk {
+  height: 75px; }
+
+.logo {
+  width: 400px;
+  transition: all ease-in-out 0.5s; }
+
+.smaller .logo {
+  width: 200px; }
+
+.top-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center; }
+
+.menu,
+.tel {
+  font-family: "Oswald", sans-serif;
+  color: #303030;
+  font-size: 20px; }
+
+.tel {
+  margin-right: 175px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out; }
+
+.smaller .tel {
+  opacity: 0; }
+
+.menu {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out; }
+  .menu span {
+    margin-left: 15px; }
+
+/*hamburger*/
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out; }
+  .button:hover .bar {
+    margin: 7px auto; }
+
+.bar {
+  display: block;
+  height: 3px;
+  width: 50px;
+  background-color: #b00e32;
+  margin: 5px auto;
+  transition: all 0.1s ease-in-out; }
+  .bar:hover {
+    margin: 7px auto; }
+
+/* Video Overlay */
+#overlay {
+  height: 600px;
+  left: 0;
+  position: relative;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+/* Hero Video + Fallback */
+#hero-vid {
+  backface-visibility: hidden;
+  background: url("http://www.markhillard.com/sandbox/media/polina.jpg") no-repeat scroll 0 0 #000;
+  background-size: cover;
+  height: auto;
+  min-height: 400px;
+  height: 600px;
+  min-width: 100%;
+  perspective: 1000;
+  position: fixed;
+  right: 0;
+  top: 200px;
+  width: auto;
+  z-index: -1; }
+
+#hero-pic {
+  display: block;
+  height: auto;
+  width: 100%; }
+
+#title {
+  backface-visibility: hidden;
+  left: 0;
+  position: fixed;
+  width: 100%; }
+  #title h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 4em;
+    color: #fff;
+    padding: 0px 5%;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    line-height: 1.5; }
+
+.btn-rood {
+  margin-bottom: -100px;
+  margin-left: auto;
+  align-self: flex-end;
+  padding: 36px 60px 36px 40px;
+  background: #b00e32;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out; }
+  .btn-rood:before {
+    content: url("../images/arrow-white.png");
+    margin-right: 10px;
+    margin-top: -7px; }
+  .btn-rood:hover {
+    background: #303030;
+    color: #fff;
+    text-decoration: none; }
+
+.scroll-down {
+  position: absolute;
+  top: 500px;
+  left: 5%; }
+
+/*blokken in header*/
+#blokken {
+  height: 550px;
+  width: 500px;
+  background: #ffffff;
+  align-self: flex-end;
+  margin-bottom: -100px;
+  margin-right: 5%;
+  z-index: 2; }
+
+.blok {
+  height: 275px;
+  width: 250px;
+  float: left;
+  padding: 45px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column; }
+  .blok span {
+    color: #b00e32;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    font-weight: lighter; }
+  .blok p {
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .blok .prijs {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%; }
+    .blok .prijs span {
+      float: left;
+      margin-bottom: 5px;
+      margin-right: 20px; }
+    .blok .prijs p {
+      float: right;
+      font-size: 40px;
+      margin: 0px; }
+
+.blok1 {
+  background: #303030; }
+
+.blok2 {
+  background: #f6cfd0; }
+  .blok2 span {
+    color: #303030; }
+  .blok2 p {
+    color: #b00e32; }
+
+.strikediag {
+  background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%); }
+
+.blok3 {
+  width: 100%; }
+  .blok3 span {
+    font-size: 15px;
+    color: #303030; }
+  .blok3 p {
+    font-size: 40px;
+    color: #b00e32; }
+  .blok3 .prijs {
+    justify-content: flex-end; }
+    .blok3 .prijs p {
+      font-size: 60px;
+      color: #303030; }
+    .blok3 .prijs span {
+      margin-bottom: 15px;
+      margin-right: 20px; }
+
+/*Intro*/
+#intro {
+  position: relative;
+  margin-top: 375px;
+  background: url(../images/patterns_dark.png);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300; }
+  #intro .row {
+    display: flex;
+    align-items: center;
+    line-height: 2; }
+  #intro .buttons {
+    transition: all 0.3s ease-in-out;
+    margin-left: -20px; }
+    #intro .buttons:hover {
+      margin-left: 5px; }
+
+/*nieuwsbericht*/
+#nieuwsbericht {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300; }
+  #nieuwsbericht .row {
+    display: flex;
+    align-items: center;
+    line-height: 2; }
+    #nieuwsbericht .row span {
+      color: #b00e32;
+      font-size: 20px;
+      font-family: "Oswald", sans-serif;
+      display: inline-block;
+      padding: 15px 0px; }
+  #nieuwsbericht .buttons {
+    transition: all 0.3s ease-in-out;
+    margin-left: -20px; }
+    #nieuwsbericht .buttons:hover {
+      margin-left: 5px;
+      color: #b00e32; }
+  #nieuwsbericht .nieuws-image-container {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px; }
+    #nieuwsbericht .nieuws-image-container .graan {
+      position: absolute;
+      right: 0px;
+      z-index: 3; }
+    #nieuwsbericht .nieuws-image-container .vlak-roze {
+      position: absolute;
+      right: 10%;
+      z-index: 1; }
+    #nieuwsbericht .nieuws-image-container .nieuwsimage {
+      z-index: 2;
+      margin-top: 20%; }
+
+/*Historie slider*/
+#historie .item {
+  display: flex;
+  align-items: center; }
+  #historie .item .container-fluid {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    #historie .item .container-fluid .row {
+      margin: 0px; }
+      #historie .item .container-fluid .row .timeline-container {
+        background: #303030;
+        height: 40vh;
+        width: 55%;
+        color: #fff;
+        padding: 45px;
+        box-sizing: border-box; }
+        #historie .item .container-fluid .row .timeline-container span {
+          font-size: 20px;
+          color: #b00e32;
+          font-family: "Oswald", sans-serif;
+          font-style: italic; }
+
+#historie .owl-nav {
+  position: absolute;
+  height: 70px;
+  bottom: 0px;
+  left: 5%;
+  display: inline-block;
+  width: 200px; }
+  #historie .owl-nav .owl-prev {
+    float: left;
+    padding: 30px 10px;
+    background: #fff;
+    content: url("../images/arrow-red-reverse.png"); }
+  #historie .owl-nav .owl-next {
+    float: left;
+    padding: 30px 10px;
+    background: #ececec;
+    content: url("../images/arrow-red.png"); }
+
+#historie .owl-dots {
+  position: absolute;
+  bottom: 115px;
+  margin: 0px 45px;
+  left: 5%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  height: 3px; }
+  #historie .owl-dots .owl-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #fff;
+    float: left;
+    margin: 0px 5px; }
+  #historie .owl-dots .owl-dot:first-child {
+    margin-left: 0px; }
+  #historie .owl-dots .owl-dot:first-child.active {
+    margin-left: -5px; }
+  #historie .owl-dots .owl-dot:last-child {
+    margin-right: 0px; }
+  #historie .owl-dots .owl-dot:last-child.active {
+    margin-right: -5px; }
+  #historie .owl-dots .active {
+    background: #b00e32;
+    height: 20px;
+    width: 20px;
+    margin: 0px; }
+
+/*Eind historie slider*/
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  #overlay {
+    height: auto; } }
+
+/* Visibility Helpers */
+@media only screen and (min-width: 769px) {
+  .hidden-desktop,
+  .visible-mobile,
+  .visible-tablet {
+    display: none !important; } }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .hidden-tablet,
+  .visible-desktop,
+  .visible-mobile {
+    display: none !important; } }
+
+@media only screen and (max-width: 479px) {
+  .hidden-mobile,
+  .visible-desktop,
+  .visible-tablet {
+    display: none !important; } }
