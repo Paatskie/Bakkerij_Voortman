@@ -34,6 +34,9 @@ h1,h2,h3,h4,h5,h6 {
 h2{
   font-size: 30px;
 }
+h3{
+  font-size: 15px;
+}
 
 /*buttons*/
 .buttons{
@@ -460,10 +463,216 @@ h2{
 }
 /*Eind historie slider*/
 
+/* Pre Footer*/
+#pre-footer{
+  background: $roze;
+  padding: 60px 0px;
+  h2{
+    color: #fff;
+    margin:0px;
+    padding:0px;
+  }
+  .btn-rood{
+    margin-top: 0px;
+    margin-left: auto;
+    padding: 10px 60px 10px 40px;
+    background: $rood;
+    color: #fff;
+    font-family: $oswald;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    &:before{
+      content: url('../images/arrow-white.png');
+      margin-right: 10px;
+      margin-top: -7px;
+    }
+    &:hover{
+      background: $donkergrijs;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+/* Eind Pre Footer*/
+
+/* Footer */
+footer{
+  background: url(../images/patterns_dark.png);
+  color: #fff;
+  padding: 180px 0px;
+  font-size: 15px;
+  line-height: 2;
+  .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .row{
+      display: flex;
+      .col-sm-3{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        h3{
+          margin-bottom: 20px;
+        }
+        .footer-logo{
+          color: #fff;
+          height: 50px;
+          align-self: flex-end;
+        }
+        span{
+          float: left;
+        }
+        span.dag{
+          width: 110px;
+          clear: both;
+        }
+        form{
+          border: 2px solid #fff;
+          background: none;
+          font-weight: bold;
+          font-style: italic;
+          float: left;
+          width: 100%;
+          input[type="text"]{
+            padding: 10px 15px;
+            float: left;
+            background: none;
+            border:0px;
+          }
+          input[type="submit"]{
+            background: #fff url('../images/BakkerijVoortman_Vinkje.svg') center center no-repeat;
+            background-size: 18px 25px;
+            float: right;
+            padding: 10px 25px;
+            border: 2px solid #fff;
+          }
+          *:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+/* Eind Footer */
+
 /* Media Queries */
+@media only screen and (min-width:1600px) and (max-width:1930px){
+  #overlay{
+    height: 625px;
+    #hero-vid{
+      height: 625px;
+    }
+  }
+  #historie .owl-dots{
+    width: 22%;
+  }
+}
+@media only screen and (max-width:1024px){
+  h2{
+    font-size: 1.7em;
+  }
+  #overlay{
+    height: 60vh;
+    #hero-vid{
+      height: 60vh;
+    }
+    #title h1{
+      font-size: 2em;
+    }
+    #blokken{
+      height: 35vh;
+      .blok{
+        font-size: 15px;
+        height: 18vh;
+        padding: 15px;
+      }
+      .blok3 p{
+        font-size: 1.5em;
+      }
+    }
+  }
+  #intro{
+    font-size: 1em;
+  }
+  #nieuwsbericht{
+    font-size: 1em;
+  }
+  #historie{
+    .item{
+      .container-fluid{
+        .row{
+          .timeline-container{
+            padding: 15px;
+            height: 30vh;
+          }
+        }
+      }
+    }
+    .owl-dots{
+      bottom: 25%;
+      width: 30%;
+    }
+    .owl-nav{
+      height: 45px;
+      .owl-prev{
+        padding: 18px 10px;
+      }
+      .owl-next{
+        padding: 18px 10px;
+      }
+    }
+  }
+  footer{
+    padding: 100px 0px;
+  }
+}
+
 @media only screen and (max-width:768px) {
   #overlay {
     height: auto;
+  }
+  #hero-pic{
+    position: absolute;
+  }
+  .logo{
+    width: 200px;
+  }
+  #historie{
+    .item{
+      .container-fluid{
+        .row{
+          .timeline-container{
+            padding: 10px 20px;
+            height: 20vh;
+          }
+        }
+      }
+    }
+    .owl-dots{
+      bottom: 15%;
+      width: 40%;
+    }
+    .owl-nav{
+      display: none;
+    }
+  }
+  #pre-footer{
+    h2{
+      font-size: 1.5em;
+    }
+  }
+  footer{
+    .container-fluid{
+      .row{
+        display: block;
+      }
+    }
   }
 }
 /* Visibility Helpers */
