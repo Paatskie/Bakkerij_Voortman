@@ -1,0 +1,840 @@
+$oswald: 'Oswald', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+$rood: #b00e32;
+$background: #ccc;
+$donkergrijs: #303030;
+$roze: #f6cfd0;
+
+/*presets*/
+.container-fluid {
+  padding: 0 5%;
+}
+.padrig120{
+  padding-right: 120px;
+}
+
+/*basis instellingen*/
+body {
+  background: $background;
+  font-family: $opensans;
+  font-weight: lighter;
+  background: url("../images/patterns_light.jpg");
+  height: 2000px;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $oswald;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 15px;
+}
+
+/*buttons*/
+.buttons{
+  color: $donkergrijs;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 0px;
+  &:before{
+    content: url('../images/arrow-red.png');
+    margin-right: 10px;
+  }
+  &:hover{
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+}
+.button-wit{
+  color: #fff;
+}
+
+/*top balk*/
+.topbalk {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex: auto;
+  height: 200px;
+  background: url(../images/patterns_light.jpg);
+  width: 100%;
+  transition: all ease-in-out 0.5s;
+  z-index: 10000;
+  }
+  .smaller .topbalk{
+    height: 75px;
+    }
+
+  .logo {
+    width: 400px;
+    transition: all ease-in-out 0.5s;
+    }
+    .smaller .logo{
+      width: 200px;
+    }
+  .top-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    }
+    .menu,
+    .tel {
+      font-family: $oswald;
+      color: $donkergrijs;
+      font-size: 20px;
+      }
+    .tel {
+      margin-right: 175px;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+      }
+    .smaller .tel{
+      opacity: 0;
+    }
+    .menu {
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      span {
+        margin-left: 15px;
+        }
+      }
+      /*hamburger*/
+      .button {
+        cursor: pointer;
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+        transition: all 0.3s ease-in-out;
+        &:hover .bar {
+          margin: 7px auto;
+        }
+      }
+
+    .bar {
+      display: block;
+      height: 3px;
+      width: 50px;
+      background-color: $rood;
+      margin: 5px auto;
+      transition: all 0.1s ease-in-out;
+      &:hover{
+        margin: 7px auto;
+      }
+    }
+/* Video Overlay */
+#overlay {
+  height: 600px;
+  left: 0;
+  position: relative;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  /* Hero Video + Fallback */
+  #hero-vid {
+    backface-visibility: hidden;
+    background: url("images/video-replace.jpg") no-repeat scroll 0 0 #000;
+    background-size: cover;
+    height: auto;
+    min-height: 400px;
+    height: 600px;
+    min-width: 100%;
+    perspective: 1000;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    width: auto;
+    z-index: -1;
+    }
+
+  #hero-pic {
+    display: none;
+    height: auto;
+    width: 100%;
+  }
+  #title {
+    backface-visibility:hidden;
+    left:0;
+    position:fixed;
+    width:100%;
+    h1 {
+      font-family: $oswald;
+      font-size:4em;
+      color: #fff;
+      padding: 0px 5%;
+      letter-spacing: 15px;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+  }
+
+    .btn-rood{
+      margin-bottom: -100px;
+      margin-left: auto;
+      align-self: flex-end;
+      padding: 36px 60px 36px 40px;
+      background: $rood;
+      color: #fff;
+      font-family: $oswald;
+      text-transform: uppercase;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+      &:before{
+        content: url('../images/arrow-white.png');
+        margin-right: 10px;
+        margin-top: -7px;
+      }
+      &:hover{
+        background: $donkergrijs;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .scroll-down{
+      position: absolute;
+      top: 500px;
+      left: 5%;
+    }
+    /*blokken in header*/
+    #blokken{
+      height: 550px;
+      width: 500px;
+      background: #ffffff;
+      align-self: flex-end;
+      margin-bottom: -100px;
+      margin-right: 5%;
+      z-index: 2;
+      }
+      .blok{
+        height: 275px;
+        width: 250px;
+        float: left;
+        padding: 45px;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: $oswald;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+        span{
+          color: $rood;
+          font-size: 12px;
+          font-family: $opensans;
+          font-style: italic;
+          font-weight: lighter;
+          }
+        p{
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+        .prijs{
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          width: 100%;
+          span{
+            float: left;
+            margin-bottom: 5px;
+            margin-right: 20px;
+          }
+          p{
+            float: right;
+            font-size: 40px;
+            margin: 0px;
+          }
+        }
+      }
+      .blok1{
+        background: $donkergrijs;
+        }
+      .blok2{
+        background: $roze;
+        span{
+          color: $donkergrijs;
+        }
+        p{
+          color: $rood;
+        }
+      }
+      .strikediag {
+        background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);
+      }
+      .blok3{
+        width: 100%;
+        span{
+          font-size: 15px;
+          color: $donkergrijs;
+        }
+        p{
+          font-size: 40px;
+          color: $rood;
+        }
+        .prijs{
+          justify-content: flex-end;
+          p{
+            font-size: 60px;
+            color: $donkergrijs;
+          }
+          span{
+            margin-bottom: 15px;
+            margin-right: 20px;
+          }
+        }
+      }
+
+/*Intro*/
+#intro{
+  position: relative;
+  margin-top: 375px;
+  background: url(../images/patterns_dark.png);
+  color: #fff;
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 300;
+  .row{
+    display: flex;
+    align-items: center;
+    line-height: 2;
+  }
+  .buttons{
+    transition: all 0.3s ease-in-out;
+    margin-left: -20px;
+    &:hover{
+      margin-left: 5px;
+    }
+  }
+}
+
+/*nieuwsbericht*/
+#nieuwsbericht{
+  font-family: $opensans;
+  font-size: 20px;
+  font-weight: 300;
+  .row{
+    display: flex;
+    align-items: center;
+    line-height: 2;
+    span{
+      color: $rood;
+      font-size: 20px;
+      font-family: $oswald;
+      display: inline-block;
+      padding: 15px 0px;
+    }
+  }
+  .buttons{
+    transition: all 0.3s ease-in-out;
+    margin-left: -20px;
+    &:hover{
+      margin-left: 5px;
+      color: $rood;
+    }
+  }
+  //*nieuws afbeeldingen
+  .nieuws-image-container{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .graan{
+      position: absolute;
+      right: 0px;
+      z-index: 3;
+    }
+    .vlak-roze{
+      position: absolute;
+      right: 10%;
+      z-index: 1;
+    }
+    .nieuwsimage{
+      z-index: 2;
+      margin-top: 20%;
+    }
+  }
+}
+
+/*Historie slider*/
+#historie{
+  .item{
+    display: flex;
+    align-items: center;
+    .container-fluid{
+      position: absolute;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .row{
+        margin:0px;
+        .timeline-container{
+          background: $donkergrijs;
+          height: 40vh;
+          width: 55%;
+          color: #fff;
+          padding: 45px;
+          box-sizing: border-box;
+          span{
+            font-size: 20px;
+            color: $rood;
+            font-family: $oswald;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+  //nav prev/next
+  .owl-nav{
+    position: absolute;
+    height: 70px;
+    bottom: 0px;
+    left: 5%;
+    display: inline-block;
+    width: 200px;
+    .owl-prev{
+      float:left;
+      padding: 30px 10px;
+      background: #fff;
+      content: url('../images/arrow-red-reverse.png');
+    }
+    .owl-next{
+      float: left;
+      padding: 30px 10px;
+      background: #ececec;
+      content: url('../images/arrow-red.png');
+    }
+  }
+  //nav dots
+  .owl-dots{
+    position: absolute;
+    bottom: 115px;
+    margin: 0px 45px;
+    left: 5%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    height: 3px;
+    .owl-dot{
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #fff;
+      float: left;
+      margin: 0px 5px;
+    }
+    .owl-dot:first-child{
+      margin-left: 0px;
+    }
+    .owl-dot:first-child.active{
+      margin-left: -5px;
+    }
+    .owl-dot:last-child{
+      margin-right: 0px;
+    }
+    .owl-dot:last-child.active{
+      margin-right: -5px;
+    }
+    .active{
+      background: $rood;
+      height: 20px;
+      width: 20px;
+      margin: 0px;
+    }
+  }
+
+}
+/*Eind historie slider*/
+
+/* Pre Footer*/
+#pre-footer{
+  background: $roze;
+  padding: 60px 0px;
+  h2{
+    color: #fff;
+    margin:0px;
+    padding:0px;
+  }
+  .btn-rood{
+    margin-top: 0px;
+    margin-left: auto;
+    padding: 10px 60px 10px 40px;
+    background: $rood;
+    color: #fff;
+    font-family: $oswald;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    &:before{
+      content: url('../images/arrow-white.png');
+      margin-right: 10px;
+      margin-top: -7px;
+    }
+    &:hover{
+      background: $donkergrijs;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+/* Eind Pre Footer*/
+
+/* Footer */
+footer{
+  background: url(../images/patterns_dark.png);
+  color: #fff;
+  padding: 180px 0px;
+  font-size: 15px;
+  line-height: 2;
+  .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .row{
+      display: flex;
+      .col-md-3{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        h3{
+          margin-bottom: 20px;
+        }
+        .footer-logo{
+          color: #fff;
+          height: 50px;
+          align-self: flex-end;
+        }
+        span{
+          float: left;
+        }
+        span.dag{
+          width: 110px;
+          clear: both;
+        }
+        form{
+          border: 2px solid #fff;
+          background: none;
+          font-weight: bold;
+          font-style: italic;
+          float: left;
+          width: 100%;
+          input[type="text"]{
+            padding: 10px 15px;
+            float: left;
+            background: none;
+            border:0px;
+          }
+          input[type="submit"]{
+            background: #fff url('../images/BakkerijVoortman_Vinkje.svg') center center no-repeat;
+            background-size: 18px 25px;
+            float: right;
+            padding: 10px 25px;
+            border: 2px solid #fff;
+          }
+          *:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+/* Eind Footer */
+
+/* Media Queries */
+@media only screen and (min-width:1750px) and (max-width:1930px){
+  #overlay{
+    height: 625px;
+    #hero-vid{
+      height: 625px;
+    }
+  }
+  #historie .owl-dots{
+    width: 22%;
+  }
+}
+@media only screen and (max-width:1024px){
+  .visible-desktop,
+  .visible-tablet {
+    display: none !important;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+  .topbalk{
+    height: 75px;
+    .logo{
+      width: 200px;
+    }
+  }
+  #overlay{
+    top: 75px;
+    height: 60vh;
+    #hero-pic{
+      position: absolute;
+      display: block !important;
+      top: -37px;
+    }
+    .scroll-down{
+      top: 360px;
+      z-index: 2;
+    }
+    #title{
+      z-index: 2;
+      h1{
+        font-size: 2em;
+      }
+    }
+    // #blokken{
+    //   height: 35vh;
+    //   .blok{
+    //     font-size: 15px;
+    //     height: 18vh;
+    //     padding: 15px;
+    //   }
+    //   .blok3 p{
+    //     font-size: 1.5em;
+    //   }
+    // }
+  }
+  #intro{
+    font-size: 1em;
+    margin-top: 225px;
+  }
+  #nieuwsbericht{
+    font-size: 1em;
+    .nieuws-image-container{
+      .nieuwsimage{
+        display: inline-block;
+        width: 90%;
+        height: 80%;
+      }
+      .vlak-roze{
+        width: 50%;
+        right: 0px;
+      }
+      .graan{
+        width: 100%;
+      }
+    }
+  }
+  #historie{
+    .item{
+      .container-fluid{
+        .row{
+          .timeline-container{
+            padding: 15px;
+            height: 30vh;
+          }
+        }
+      }
+    }
+    .owl-dots{
+      bottom: 25%;
+      width: 30%;
+    }
+    .owl-nav{
+      height: 45px;
+      .owl-prev{
+        padding: 18px 10px;
+      }
+      .owl-next{
+        padding: 18px 10px;
+      }
+    }
+  }
+  footer{
+    padding: 100px 0px;
+    .container-fluid{
+      .row{
+        display: block;
+        .col-md-3{
+          float: left;
+          display: inline-block;
+          width: 33%;
+          form{
+            margin-top: 30px;
+            input[type="text"]{
+              width: 70%;
+              font-size: 0.9em;
+            }
+          }
+        }
+        .first-row-footer{
+          display: inline-block;
+          width: 100%;
+          float: left;
+          clear: both;
+          h2{
+            float: left;
+            width: auto;
+            display: inline-block;
+          }
+          .footer-logo{
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .topbalk{
+    height: 75px;
+  }
+  #overlay {
+    height: auto;
+    top: 75px;
+  }
+  #hero-pic{
+    position: absolute;
+  }
+  .logo{
+    width: 200px;
+  }
+  #historie{
+    .item{
+      .container-fluid{
+        .row{
+          .timeline-container{
+            padding: 10px 20px;
+            height: 20vh;
+          }
+        }
+      }
+    }
+    .owl-dots{
+      bottom: 15%;
+      width: 40%;
+    }
+    .owl-nav{
+      display: none;
+    }
+  }
+  #pre-footer{
+    h2{
+      font-size: 1.5em;
+    }
+  }
+  footer{
+    .container-fluid{
+      .row{
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .tel{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  #overlay{
+    height: 70%;
+    overflow: hidden;
+    display: block;
+    #title{
+      top: 25%;
+      text-align: center;
+    }
+    #hero-pic{
+      top: 0px;
+      height: 50vh;
+      width: 100%;
+    }
+    .scroll-down{
+      display: inline-block !important;
+      top: 15%;
+      z-index: 20;
+      left: 50%;
+      margin-left: -10px;
+    }
+    #blokken{
+      display: block;
+      align-self: auto;
+      float: left;
+      margin: 100% 0 0 0;
+      width: 100%;
+      height: auto;
+      clear: both;
+      .blok{
+        display: inline-block;
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+        float: left;
+      }
+    }
+    .reserveer-nu-mobile{
+      display: block;
+      float: left;
+      align-self: auto;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+  #intro{
+    margin-top: 25%;
+    .row{
+      display: block;
+      .col-sm-6{
+        text-align: center;
+        padding: 30px 0px;
+      }
+    }
+  }
+  #nieuwsbericht{
+    .row{
+      display: block;
+      .col-sm-6{
+        text-align: center;
+        padding: 30px 0px;
+      }
+    }
+  }
+}
+
+/* Visibility Helpers */
+@media only screen and (min-width:769px) {
+  .visible-mobile,
+  .visible-tablet {
+    display: none !important;
+  }
+}
+@media only screen and (min-width:480px) and (max-width:768px) {
+  .hidden-tablet,
+  .visible-desktop,
+  .visible-mobile {
+    display: none !important;
+  }
+}
+@media only screen and (max-width:479px) {
+  .hidden-mobile,
+  .visible-desktop,
+  .visible-tablet {
+    display: none !important;
+  }
+}
